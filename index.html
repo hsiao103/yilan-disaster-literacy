@@ -446,7 +446,7 @@ function stageOf(grades,tiers,cats){
   return{g:gt,t:tt,c:ct};
 }
 function stageChip(st){if(!st)return'';const parts=[st.g,st.t].filter(Boolean).map(esc).join('<i>・</i>')||'綜合';return`<span class="stage">🏅 ${parts}${esc(CFG.stageSuffix)}${st.c?`<i>・</i>${esc(st.c)}`:''}</span>`;}
-function prep(r){const [cat,q,opts,ans,exp,grade,tier,gid,scn]=r;if(opts.length===2)return{cat,q,opts:opts.slice(),ans,exp,grade,tier,gid,scn};const idx=shuffle(opts.map((_,i)=>i));return{cat,q,opts:idx.map(i=>opts[i]),ans:idx.indexOf(ans),exp,grade,tier,gid,scn};}
+function prep(r){const [cat,q,opts,ans,exp,grade,tier,gid,scn]=r;if(opts.length===2)return{cat,q,opts:opts.slice(),ans,exp,grade,tier,gid,scn};const pin=i=>/^以上皆(非|是)|^皆非|^皆是/.test(opts[i]);const idx=shuffle(opts.map((_,i)=>i).filter(i=>!pin(i))).concat(opts.map((_,i)=>i).filter(pin));return{cat,q,opts:idx.map(i=>opts[i]),ans:idx.indexOf(ans),exp,grade,tier,gid,scn};}
 /* 抽題：情境題組（同一個情境ID）整組一起出、題序維持，其餘單題打散；n 為目標題數（最後一組可能略多） */
 function pickUnits(rows,n){const units=[],gm={};rows.forEach(r=>{const g=r[7];if(g){if(!gm[g]){gm[g]=[];units.push(gm[g]);}gm[g].push(r);}else units.push([r]);});
   const out=[];for(const u of shuffle(units)){if(out.length>=n)break;out.push(...u);}return out;}
