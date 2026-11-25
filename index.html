@@ -5,10 +5,10 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>知識王</title>
 <style>
-:root{--p0:#ffb020;--p1:#38bdf8;--p2:#a3e635;--p3:#f472b6;--bg:#0b1d22;--bg2:#12303a;--card:#173b47;--line:#2a5663;--ink:#f3f6fb;--mute:#9fb2cc;--acc:#ff8a3d;--ok:#2fb67c;--bad:#ef5b5b}
+:root{--p0:#ffb020;--p1:#38bdf8;--p2:#a3e635;--p3:#f472b6;--bg:#0b1d22;--bg2:#12303a;--card:#173b47;--line:#2a5663;--ink:#f3f6fb;--mute:#9fb2cc;--acc:#ff8a3d;--ok:#2fb67c;--bad:#ef5b5b;--deep:#0a181c;--glow:#14414a;--st1:#14b8a6;--st2:#0ea5e9;--stx:#04202a;--on:#0f766e;--joinbg:#17414a;--joinbd:#5cc0d8;--okbg:#10302a}
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{height:100%}
-body{font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;background:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px) 0 0/32px 32px,linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px) 0 0/32px 32px,radial-gradient(1200px 700px at 20% -10%,#14414a 0,transparent 60%),var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased}
+body{font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;background:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px) 0 0/32px 32px,linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px) 0 0/32px 32px,radial-gradient(1200px 700px at 20% -10%,var(--glow) 0,transparent 60%),var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased}
 button,input,select{font:inherit;color:inherit}
 button{cursor:pointer}
 .btn{background:var(--card);border:1px solid var(--line);padding:.6em 1.1em;border-radius:10px;font-weight:600;transition:.15s}
@@ -30,7 +30,7 @@ svg{display:block}
 .hcards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
 .hc{background:var(--bg2);border:1px solid var(--line);border-radius:18px;padding:24px;display:flex;flex-direction:column;gap:12px;text-align:left}
 .hc h2{font-size:20px}.hc p{color:var(--mute);font-size:14px;flex:1}
-.hc input{background:#0a181c;border:1px solid var(--line);border-radius:10px;padding:.7em 1em;font-size:20px;letter-spacing:.3em;text-align:center}
+.hc input{background:var(--deep);border:1px solid var(--line);border-radius:10px;padding:.7em 1em;font-size:20px;letter-spacing:.3em;text-align:center}
 .chars{display:flex;justify-content:center;gap:14px;margin:0 0 26px}
 .chars .pav{width:72px;height:72px;border-width:3px}
 /* ===== 主持人 ===== */
@@ -48,11 +48,11 @@ svg{display:block}
 @media(max-width:760px){.grid2{grid-template-columns:1fr}}
 .row{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:10px}
 .row>label.t{min-width:6.5em;color:var(--mute);font-size:14px}
-select{background:#0a181c;border:1px solid var(--line);border-radius:8px;padding:.45em .7em}
+select{background:var(--deep);border:1px solid var(--line);border-radius:8px;padding:.45em .7em}
 .cats{display:flex;flex-wrap:wrap;gap:8px}
-.cats label{background:#0a181c;border:1px solid var(--line);border-radius:999px;padding:.3em .85em;font-size:14px;cursor:pointer;display:flex;gap:6px;align-items:center}
+.cats label{background:var(--deep);border:1px solid var(--line);border-radius:999px;padding:.3em .85em;font-size:14px;cursor:pointer;display:flex;gap:6px;align-items:center}
 .slots{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
-.slot{background:#0a181c;border:1px dashed var(--line);border-radius:12px;padding:10px;min-height:68px;display:flex;align-items:center;gap:10px}
+.slot{background:var(--deep);border:1px dashed var(--line);border-radius:12px;padding:10px;min-height:68px;display:flex;align-items:center;gap:10px}
 .slot.on{border-style:solid;border-color:var(--pc,var(--ok))}
 .slot .mini{width:46px;height:46px}
 .slot .nm{flex:1;min-width:0}
@@ -61,7 +61,7 @@ select{background:#0a181c;border:1px solid var(--line);border-radius:8px;padding
 .dot.on{background:var(--ok)}
 .qcard .qtxt{font-size:20px;font-weight:700;line-height:1.5;margin:6px 0 12px}
 .hopts{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-.hopt{display:flex;gap:8px;padding:10px 12px;border-radius:10px;background:#0a181c;border:1px solid var(--line);font-size:15px}
+.hopt{display:flex;gap:8px;padding:10px 12px;border-radius:10px;background:var(--deep);border:1px solid var(--line);font-size:15px}
 .hopt.right{border-color:var(--ok);background:rgba(47,182,124,.15)}
 .hexp{margin-top:12px;padding:12px;border-left:4px solid var(--acc);background:rgba(255,138,61,.1);border-radius:8px;font-size:15px;line-height:1.6}
 .ctrls{display:flex;flex-wrap:wrap;gap:10px;margin-top:4px}
@@ -87,21 +87,21 @@ th{color:var(--mute);font-weight:500;font-size:13px}
 .top .cat{background:var(--acc);color:#1b1006;font-weight:800;padding:.2em .9em;border-radius:999px}
 .top .lv{background:var(--card);border:1px solid var(--line);padding:.2em .8em;border-radius:999px;color:var(--ink)}
 .top .no{color:var(--mute)}
-.stage{display:inline-flex;gap:.5em;align-items:center;background:linear-gradient(90deg,#14b8a6,#0ea5e9);color:#04202a;font-weight:800;padding:.2em 1em;border-radius:999px;font-size:1.05em;box-shadow:0 2px 12px #0006}
+.stage{display:inline-flex;gap:.5em;align-items:center;background:linear-gradient(90deg,var(--st1),var(--st2));color:var(--stx);font-weight:800;padding:.2em 1em;border-radius:999px;font-size:1.05em;box-shadow:0 2px 12px #0006}
 .stage i{font-style:normal;opacity:.55}
 .stagebar{font-size:clamp(18px,2.6vw,40px);margin:.4em 0}
 .hstage{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:12px;font-size:15px}
 .mx{border-collapse:separate;border-spacing:5px;margin:4px 0 10px}
 .mx th,.mx td{padding:0}
-.mx button{font:inherit;cursor:pointer;border:1px solid var(--line);border-radius:10px;padding:.45em .8em;min-width:4.6em;background:#0a181c;color:var(--mute)}
+.mx button{font:inherit;cursor:pointer;border:1px solid var(--line);border-radius:10px;padding:.45em .8em;min-width:4.6em;background:var(--deep);color:var(--mute)}
 .mx button.hd.on{background:var(--acc);color:#1b1006;font-weight:700;border-color:var(--acc)}
-.mx button.ce.on{background:#0f766e;color:#fff;border-color:#14b8a6;font-weight:700}
+.mx button.ce.on{background:var(--on);color:#fff;border-color:var(--st1);font-weight:700}
 .mx button.ce small{display:block;font-size:11px;opacity:.8}
 .qa{display:flex;gap:8px;flex-wrap:wrap;margin:4px 0 8px}
 .qa .btn{padding:.35em .9em;font-size:13px}
 .warn{color:#fbbf24;font-size:13px}
 .timer{margin-left:auto;display:flex;align-items:center;gap:1vw;flex:1;max-width:34vw}
-.bar{flex:1;height:1.2vh;background:#0a181c;border-radius:99px;overflow:hidden}
+.bar{flex:1;height:1.2vh;background:var(--deep);border-radius:99px;overflow:hidden}
 .bar i{display:block;height:100%;background:var(--acc);width:100%;transition:width .2s linear}
 .timer b{font-size:clamp(22px,3.2vw,56px);min-width:2.2em;text-align:right}
 .question{font-size:clamp(22px,3.5vw,64px);font-weight:800;line-height:1.35;background:var(--bg2);border:1px solid var(--line);padding:1.8vh 2.5vw;border-radius:1.2vw}
@@ -117,6 +117,48 @@ th{color:var(--mute);font-weight:500;font-size:13px}
 .chip{width:4.4vh;height:4.4vh;border-width:.3vh}
 .wait{background:rgba(255,138,61,.12);border:2px dashed var(--acc);border-radius:1vw;padding:1.2vh 2vw;font-size:clamp(14px,2vw,36px);text-align:center;font-weight:700}
 .exp,.hexp,.sfb p{white-space:pre-line}
+.credit{display:inline-flex;align-items:center;gap:.6em;color:var(--mute);font-size:clamp(12px,1.1vw,20px);font-weight:700}
+.credit img{height:2.8em;width:auto;border-radius:8px;background:#fff;padding:.15em .5em}
+.tlogo{height:1.15em;width:1.15em;border-radius:50%;vertical-align:-.2em;margin-right:.3em;background:#fff;object-fit:cover}
+.credit.fix{position:fixed;left:14px;bottom:10px;z-index:5;opacity:.9}
+.seats{display:grid;grid-template-columns:repeat(10,1fr);gap:.55vw;width:100%}
+.seat{position:relative;background:#1a2a30;border:2px solid #3b4a50;color:#8fa0a8;border-radius:.7vw;padding:.5vh .2vw;text-align:center;line-height:1.1;min-width:0}
+.seat b{display:block;font-size:clamp(15px,2.3vw,42px);font-weight:900}
+.seat small{display:block;font-size:clamp(10px,1vw,18px);height:1.15em;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.seat .mk{position:absolute;top:0;right:.25vw;font-style:normal;font-weight:900;font-size:clamp(11px,1.2vw,22px)}
+.seat.empty{opacity:.3;border-style:dashed}
+.seat.joined{background:var(--joinbg);border-color:var(--joinbd);color:var(--ink)}
+.seat.idle{background:#2b3438;border-color:#4a575c;color:#aab6bb}
+.seat.done{background:var(--ok);border-color:#8ff2c4;color:#04281a}
+.seat.right{background:var(--ok);border-color:#8ff2c4;color:#04281a}
+.seat.wrong{background:var(--bad);border-color:#ffb0b0;color:#3a0707}
+.seat.off{opacity:.55}
+.seatinfo{display:flex;align-items:center;gap:1.4vw;flex-wrap:wrap;font-size:clamp(14px,1.6vw,28px);color:var(--mute);margin:.2vh 0}
+.seatinfo b{color:var(--ink);font-size:1.25em}
+.seatinfo.big{font-size:clamp(22px,3vw,54px);justify-content:center}
+.lg1{display:inline-flex;align-items:center;gap:.4em}.lg1 i{width:1em;height:1em;border-radius:.2em;display:inline-block}
+.seats.hs{grid-template-columns:repeat(6,1fr);gap:6px}
+.hs .seat{padding:4px 2px;border-radius:8px}.hs .seat b{font-size:18px}.hs .seat small{font-size:11px}.hs .seat .mk{font-size:12px;right:3px}
+.hseats{display:grid;grid-template-columns:repeat(auto-fill,minmax(112px,1fr));gap:8px}
+.hseat{background:var(--deep);border:1px dashed var(--line);border-radius:10px;padding:6px;display:flex;flex-direction:column;align-items:center;gap:2px;min-height:78px;justify-content:center;color:var(--mute)}
+.hseat.on{border-style:solid;border-color:var(--ok);background:var(--okbg);color:var(--ink)}
+.hseat b{font-size:20px}.hseat small{font-size:12px;height:1.2em;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;max-width:100%}
+.hseat .btn{padding:.15em .7em;font-size:12px}
+.tw{overflow-x:auto;max-height:55vh;border:1px solid var(--line);border-radius:10px}
+.tw table{border-collapse:collapse;font-size:13px;white-space:nowrap}
+.tw th,.tw td{padding:4px 7px;border-bottom:1px solid var(--line);text-align:center}
+.tw th{position:sticky;top:0;background:var(--card)}
+.tw td.c1{background:rgba(47,182,124,.35)}.tw td.c0{background:rgba(239,91,91,.35)}.tw td.cn{color:var(--mute)}
+.rank.seatrank{display:grid;grid-template-columns:1fr 1fr;max-width:1500px;gap:1vh 1.5vw}
+.seatrank .rk{padding:.9vh 1.4vw;font-size:clamp(16px,2.2vw,40px);gap:1.2vw}
+.seatpick{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;width:100%;max-width:420px}
+.seatpick button{background:#12303a;border:2px solid var(--line);color:var(--ink);border-radius:10px;padding:.55em 0;font-size:19px;font-weight:800;cursor:pointer}
+.seatpick button.sel{background:var(--ok);border-color:#8ff2c4;color:#04281a}
+.seatpick button.tk{opacity:.28;cursor:not-allowed}
+.seatpick button.rc{border-style:dashed}
+.seatb{display:inline-flex;align-items:center;justify-content:center;min-width:2.1em;height:2.1em;border-radius:50%;background:var(--ok);color:#04281a;font-weight:900}
+.seatbig{width:34vmin;height:34vmin;max-width:220px;max-height:220px;border-radius:50%;background:var(--ok);color:#04281a;font-size:min(16vmin,100px);font-weight:900;display:flex;align-items:center;justify-content:center}
+
 .exp{background:rgba(47,182,124,.13);border:2px solid var(--ok);border-radius:1vw;padding:1.3vh 2vw;font-size:clamp(14px,2vw,36px);line-height:1.5}
 .exp b{color:var(--ok)}
 .pc{flex:1;background:var(--bg2);border:1px solid var(--line);border-top:.7vh solid var(--pc,var(--line));border-radius:1vw;padding:1vh 1vw;display:flex;align-items:center;gap:1vw;font-size:clamp(14px,1.8vw,30px);min-width:0}
@@ -126,7 +168,7 @@ th{color:var(--mute);font-weight:500;font-size:13px}
 .pc .pn{color:var(--pc,var(--mute));font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .pc .ps{font-size:1.9em;font-weight:900;line-height:1.05;color:var(--pc,var(--ink))}
 .pc .pst{font-size:.8em;white-space:nowrap}
-.pbar{height:.9vh;background:#0a181c;border-radius:9px;overflow:hidden;margin-top:.3vh}
+.pbar{height:.9vh;background:var(--deep);border-radius:9px;overflow:hidden;margin-top:.3vh}
 .pbar i{display:block;height:100%;background:var(--pc);border-radius:9px}
 .plist.big .pc{flex-direction:column;text-align:center;padding:2vh 1vw;gap:1.2vh}
 .plist.big .pc .pav{width:15vh;height:15vh}
@@ -146,7 +188,7 @@ th{color:var(--mute);font-weight:500;font-size:13px}
 .pl .bar2 .sc2{color:var(--pc)}
 .pl .bar2 span.g{color:var(--mute);font-weight:500;font-size:14px}
 .pl h2{font-size:24px}
-.pl input{background:#0a181c;border:1px solid var(--line);border-radius:12px;padding:.8em 1em;font-size:22px;text-align:center;width:100%;max-width:320px}
+.pl input{background:var(--deep);border:1px solid var(--line);border-radius:12px;padding:.8em 1em;font-size:22px;text-align:center;width:100%;max-width:320px}
 .btns{flex:1;display:grid;grid-template-columns:1fr 1fr;gap:12px;min-height:50vh}
 .ab{border:0;border-radius:22px;color:#1d2433;background:#f3ecdc;border-left:16px solid var(--oc,#888);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;box-shadow:0 6px 0 rgba(0,0,0,.4);transition:.1s}
 .ab span{font-size:clamp(48px,15vw,90px);line-height:1;font-weight:900;color:var(--oc)}
@@ -189,7 +231,7 @@ th{color:var(--mute);font-weight:500;font-size:13px}
 details.fmt{margin-top:6px;font-size:14px;color:var(--mute)}
 details.fmt summary{cursor:pointer;color:var(--ink)}
 details.fmt table{margin-top:8px;font-size:13px}
-details.fmt code{background:#0a181c;padding:.05em .4em;border-radius:5px;color:var(--ink)}
+details.fmt code{background:var(--deep);padding:.05em .4em;border-radius:5px;color:var(--ink)}
 /* ===== 個人挑戰（自學）===== */
 .solo{max-width:720px;margin:0 auto;padding:16px 16px 40px;display:flex;flex-direction:column;gap:14px}
 .solo h2{font-size:clamp(20px,4.5vw,28px)}
@@ -201,15 +243,15 @@ details.fmt code{background:#0a181c;padding:.05em .4em;border-radius:5px;color:v
 .spanel{background:var(--bg2);border:1px solid var(--line);border-radius:16px;padding:16px}
 .spanel h3{font-size:16px;margin-bottom:10px}
 .sl{color:var(--mute);font-size:13px;margin:10px 0 6px}
-.sc{border:1px solid var(--line);background:#0a181c;border-radius:999px;padding:.5em 1.05em;font-size:15px;color:var(--mute);cursor:pointer;font-weight:600}
+.sc{border:1px solid var(--line);background:var(--deep);border-radius:999px;padding:.5em 1.05em;font-size:15px;color:var(--mute);cursor:pointer;font-weight:600}
 .sc.on{background:var(--acc);color:#1b1006;border-color:var(--acc);font-weight:800}
 .sc.mini2,.btn.mini2{padding:.2em .8em;font-size:12px}
 .shero{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:10px}
-.sh{background:#0a181c;border:2px solid var(--line);border-radius:14px;padding:8px 10px;display:flex;flex-direction:column;align-items:center;gap:4px;color:var(--mute);cursor:pointer;min-width:84px}
+.sh{background:var(--deep);border:2px solid var(--line);border-radius:14px;padding:8px 10px;display:flex;flex-direction:column;align-items:center;gap:4px;color:var(--mute);cursor:pointer;min-width:84px}
 .sh.on{border-color:var(--pc);color:var(--ink);box-shadow:0 0 0 2px var(--pc)}
 .sh .pav{width:56px;height:56px;border-width:3px}
 .sh small{font-size:12px}
-.solo input#sname{background:#0a181c;border:1px solid var(--line);border-radius:10px;padding:.65em 1em;font-size:16px;width:100%}
+.solo input#sname{background:var(--deep);border:1px solid var(--line);border-radius:10px;padding:.65em 1em;font-size:16px;width:100%}
 .sgo{font-size:20px;padding:.8em;width:100%}
 .srow{display:flex;justify-content:space-between;font-size:14px;padding:6px 0;border-bottom:1px dashed var(--line);color:var(--mute)}
 .sprog{display:flex;align-items:center;gap:10px;font-size:14px;color:var(--mute)}
@@ -220,7 +262,7 @@ details.fmt code{background:#0a181c;padding:.05em .4em;border-radius:5px;color:v
 .sopts{display:flex;flex-direction:column;gap:10px}
 .sopt{display:flex;gap:12px;align-items:center;text-align:left;width:100%;background:var(--card);border:2px solid var(--line);border-radius:14px;padding:14px 16px;font-size:clamp(16px,3.8vw,20px);color:var(--ink);cursor:pointer}
 .sopt:not(:disabled):hover{border-color:var(--acc)}
-.sopt .l{flex:0 0 36px;height:36px;border-radius:50%;background:#0a181c;display:grid;place-items:center;font-weight:800}
+.sopt .l{flex:0 0 36px;height:36px;border-radius:50%;background:var(--deep);display:grid;place-items:center;font-weight:800}
 .sopt.right{border-color:var(--ok);background:rgba(47,182,124,.18)}
 .sopt.wrong{border-color:var(--bad);background:rgba(239,91,91,.18)}
 .sopt.dim{opacity:.5}
@@ -231,7 +273,7 @@ details.fmt code{background:#0a181c;padding:.05em .4em;border-radius:5px;color:v
 .sres{text-align:center;background:var(--bg2);border:1px solid var(--line);border-radius:18px;padding:22px 16px}
 .stars{font-size:44px;letter-spacing:.1em}
 .sgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:10px;margin-top:14px}
-.sgrid div{background:#0a181c;border-radius:12px;padding:10px}
+.sgrid div{background:var(--deep);border-radius:12px;padding:10px}
 .sgrid b{display:block;font-size:24px;color:var(--acc)}.sgrid small{color:var(--mute)}
 .crow{display:grid;grid-template-columns:minmax(80px,30%) 1fr auto;gap:10px;align-items:center;margin:6px 0;font-size:14px}
 .crow .bar{height:10px}
@@ -262,14 +304,19 @@ const esc=s=>String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;'
 const UC=window.GAME_CONFIG||{};
 const CFG=Object.assign({title:'知識王',icon:'🎓',subtitle:'一個大螢幕・2–4 位選手・教師遙控的搶答遊戲',storageKey:'fkquiz',peerPrefix:'',publicUrl:'',
   lv1Suffix:'年級',tierOrder:[],stageSuffix:'競賽',characters:['安安隊長','小水手','頭巾俠','探險家'],csvUrl:'',
-  pointsBase:100,pointsSpeed:50,defaultN:20,defaultLimit:20,formUrl:'',formFields:{},theme:{},templateRows:null},UC);
+  pointsBase:100,pointsSpeed:50,seatMode:false,maxPlayers:4,examPoints:null,defaultN:20,defaultLimit:20,formUrl:'',formFields:{},theme:{},templateRows:null},UC);
 CFG.labels=Object.assign({lv1:'年級',lv2:'難度',cat:'類別'},UC.labels||{});
 const SK=CFG.storageKey, PP=CFG.peerPrefix||(SK+'-');
 const CHARS=[0,1,2,3].map(i=>(CFG.characters&&CFG.characters[i])||('隊員'+(i+1)));
 const TITLE=CFG.icon+' '+CFG.title;
+const TITLEH=CFG.iconImg?`<img class="tlogo" src="${esc(CFG.iconImg)}" alt="" onerror="this.remove()">${esc(CFG.title)}`:esc(TITLE);
 document.title=CFG.title;
 try{Object.keys(CFG.theme||{}).forEach(k=>document.documentElement.style.setProperty('--'+k,CFG.theme[k]));}catch(e){}
-const MAXP=4, LBL=['A','B','C','D'];
+const CLASSMAX=Math.max(1,Math.min(60,(CFG.maxPlayers|0)||30));
+let SEAT=false, MAXP=4;
+const creditHTML=cls=>CFG.credit?`<div class="credit ${cls||''}"><img src="${esc(CFG.credit.logo||'')}" alt="" onerror="this.remove()"><span>${esc(CFG.credit.text)}</span></div>`:'';
+const setMode=m=>{SEAT=!!CFG.seatMode&&m==='class';MAXP=SEAT?CLASSMAX:4;};
+const LBL=['A','B','C','D'];
 const pageBase=location.href.split('#')[0];
 const base=pageBase;
 const isLocalHost=/^(localhost|127\.|0\.0\.0\.0|\[::1\])/.test(location.hostname);
@@ -466,6 +513,14 @@ const AV=[
 ];
 const svg=ci=>'<svg viewBox="0 0 100 100" aria-hidden="true">'+AV[(ci||0)%4]+'</svg>';
 const av=(p,cls)=>`<span class="${cls}" style="--pc:${pcv(p)}">${svg(p&&p.ci)}</span>`;
+/* 座號磚：items=[{seat,name,st,on}]，st：joined/idle/done/right/wrong */
+function seatGrid(items,cls){
+  const by={};items.forEach(x=>{by[x.seat]=x;});
+  return'<div class="seats '+(cls||'')+'">'+Array.from({length:MAXP},(_,i)=>{const n=i+1,x=by[n];
+    if(!x)return`<div class="seat empty"><b>${n}</b></div>`;
+    const mk=(x.st==='done'||x.st==='right')?'✓':x.st==='wrong'?'✗':'';
+    return`<div class="seat ${x.st} ${x.on?'':'off'}"><b>${n}</b><small>${esc(x.name||'')}</small>${mk?`<i class="mk">${mk}</i>`:''}</div>`;}).join('')+'</div>';
+}
 
 /* ===== 通訊層：PeerJS（跨裝置）＋ BroadcastChannel（同一台電腦的分頁備援）===== */
 function makeT(room,isHost,onMsg,onStatus){
@@ -531,7 +586,7 @@ function startSolo(){
     const stage=stageOf(S.lv1,S.lv2,S.cats);
     const last=store.hist.slice(-5).reverse();
     return`<div class="solo"><div class="sbar"><h2>🎯 個人挑戰（自學）</h2><button class="btn" data-a="home">← 回首頁</button></div>
-    <p class="sub">${esc(TITLE)}：自己選項目、答完立刻看正解與解析，答錯的題目會自動收進「錯題本」。</p>
+    <p class="sub">${TITLEH}：自己選項目、答完立刻看正解與解析，答錯的題目會自動收進「錯題本」。</p>
     <div class="spanel"><h3>① 選擇角色與暱稱</h3><div class="shero">${[0,1,2,3].map(i=>`<button class="sh ${store.hero===i?'on':''}" data-hero="${i}" style="--pc:var(--p${i})">${av({ci:i},'pav')}<small>${esc(CHARS[i])}</small></button>`).join('')}</div>
       <input id="sname" maxlength="8" placeholder="${CFG.formUrl?'暱稱或姓名（送成績給老師時使用）':'暱稱（可不填）'}" value="${esc(store.name||'')}">
       ${CFG.formUrl?`<input id="scls" maxlength="12" placeholder="班級與座號，例如 501-07" value="${esc(store.cls||'')}" style="margin-top:8px">`:''}</div>
@@ -658,7 +713,7 @@ function startSolo(){
 }
 
 function home(){
-  app.innerHTML=`<div class="home"><h1>${esc(TITLE)}</h1>
+  app.innerHTML=`<div class="home"><h1>${TITLEH}</h1>
   <div class="chars">${[0,1,2,3].map(i=>av({ci:i},'pav')).join('')}</div>
   <p>${esc(CFG.subtitle)}（題庫 ${BANK.length} 題）</p>${BANK.length?'':'<p class="bad">⚠ 目前題庫是空的：請進入「主持人」頁，在「題庫管理」上傳 CSV 題庫。</p>'}
   <div class="hcards">
@@ -666,7 +721,7 @@ function home(){
    <div class="hc"><h2>🖥️ 大螢幕</h2><p>投影在教室前方，顯示題目、選項、倒數與每位選手的角色與分數。</p><input id="r1" placeholder="房號" inputmode="numeric" maxlength="4"><button class="btn" data-go="screen" data-in="r1">開啟大螢幕</button></div>
    <div class="hc"><h2>🎯 個人挑戰（自學）</h2><p>一個人也能玩：自選範圍、答完立刻看正解與解析，答錯的題目自動收進錯題本。</p><button class="btn pri" data-go="solo">開始自學挑戰</button></div>
    <div class="hc"><h2>📱 選手</h2><p>在手機或平板上只看到按鈕作答，不會看到題目文字。</p><input id="r2" placeholder="房號" inputmode="numeric" maxlength="4"><button class="btn" data-go="play" data-in="r2">我是選手</button></div>
-  </div></div>`;
+  </div>${creditHTML()}</div>`;
   app.onclick=e=>{
     const b=e.target.closest('[data-go]');if(!b)return;
     const role=b.dataset.go;
@@ -689,10 +744,10 @@ function home(){
 function startHost(room){
   const KEY=SK+'-host';
   const defCfg=()=>({n:CFG.defaultN,limit:CFG.defaultLimit,cats:CATS.slice(),grades:GRADES.slice(),tiers:TIERS.slice(),auto:true,pub:false});
-  const fresh=()=>({phase:'lobby',players:[],qList:[],qi:0,limit:20,remain:0,paused:false,showAns:false,cfg:defCfg()});
+  const fresh=()=>({phase:'lobby',mode:(CFG.seatMode&&CFG.defaultMode==='class')?'class':'classic',players:[],qList:[],qi:0,limit:20,remain:0,paused:false,showAns:false,cfg:defCfg()});
   let sv=null;try{sv=JSON.parse(localStorage.getItem(KEY)||'null');}catch(e){}
   let S=(sv&&sv.room===room&&sv.S)?sv.S:fresh();
-  S.cfg=Object.assign(defCfg(),S.cfg||{});fixCfg(S.cfg);
+  S.cfg=Object.assign(defCfg(),S.cfg||{});fixCfg(S.cfg);if(!S.mode)S.mode='classic';setMode(S.mode);
   if(S.phase==='question')S.paused=true;
   S.players.forEach((p,i)=>{if(p.ci==null)p.ci=i;});
   let seen={},cloud='wait',onSig='',lastT=Date.now(),T=null;
@@ -702,15 +757,32 @@ function startHost(room){
   /* 對外公開狀態：正解、重點、得分在老師「公布」之前一律不送出 */
   function pub(){
     const q=S.qList[S.qi];const rev=S.phase==='reveal';const open=rev&&S.showAns;const mask=rev&&!S.showAns;
-    return{ts:Date.now(),room,stage:(S.phase==='lobby'||!S.stage)?stageOf(S.cfg.grades,S.cfg.tiers,S.cfg.cats):S.stage,phase:S.phase,paused:S.paused,qi:S.qi,total:S.qList.length,limit:S.limit,remain:Math.round(S.remain),
+    return{ts:Date.now(),room,stage:(S.phase==='lobby'||!S.stage)?stageOf(S.cfg.grades,S.cfg.tiers,S.cfg.cats):S.stage,phase:S.phase,mode:S.mode,paused:S.paused,qi:S.qi,total:S.qList.length,limit:S.limit,remain:Math.round(S.remain),
       q:(q&&S.phase!=='end'&&S.phase!=='lobby')?{cat:q.cat,grade:q.grade,tier:q.tier,scn:q.scn||'',q:q.q,opts:q.opts,tf:q.opts.length===2,ans:open?q.ans:null,exp:open?q.exp:null}:null,
-      players:S.players.map(p=>({cid:p.cid,ci:p.ci,name:p.name,score:mask?p.score-(p.gain||0):p.score,answered:p.ans!=null,choice:rev?p.ans:null,gain:open?p.gain:null,on:online(p.cid)}))};
+      players:S.players.map(p=>({cid:p.cid,ci:p.ci,seat:p.seat,nc:(p.res||[]).filter(x=>x===1).length,name:p.name,score:mask?p.score-(p.gain||0):p.score,answered:p.ans!=null,choice:rev?p.ans:null,gain:open?p.gain:null,on:online(p.cid)}))};
   }
-  const push=()=>T&&T.send({t:'state',s:pub()});
+  const pushNow=()=>T&&T.send({t:'state',s:pub()});
+  let pushTm=null;
+  const push=()=>{if(!SEAT)return pushNow();if(pushTm)return;pushTm=setTimeout(()=>{pushTm=null;pushNow();},180);};
   function changed(){persist();render();push();}
   function onMsg(m){
     if(!m||!m.t)return;
-    if(m.t==='hello'){if(m.cid)seen[m.cid]=Date.now();push();return;}
+    if(m.t==='hello'){const first=m.cid&&!seen[m.cid];if(m.cid)seen[m.cid]=Date.now();if(!SEAT||first)push();return;}
+    if(m.t==='join'&&SEAT){
+      const seat=parseInt(m.seat,10);
+      if(!(seat>=1&&seat<=MAXP)){T.send({t:'deny',cid:m.cid,reason:'seat'});return;}
+      const name=String(m.name||'').replace(/^[=+\-@\s]+/,'').trim().slice(0,8);
+      let p=S.players.find(x=>x.cid===m.cid);
+      const other=S.players.find(x=>x.seat===seat&&x!==p);
+      if(other){
+        if(online(other.cid)){T.send({t:'deny',cid:m.cid,seat,reason:'taken'});return;}
+        if(p)S.players=S.players.filter(x=>x!==other);else{other.cid=m.cid;p=other;}
+      }
+      if(!p){p={cid:m.cid,seat,name,ci:seat%4,score:0,ans:null,ansRemain:0,gain:0,res:[]};S.players.push(p);}
+      p.seat=seat;p.ci=seat%4;p.name=name;
+      S.players.sort((a,b)=>a.seat-b.seat);
+      seen[m.cid]=Date.now();changed();return;
+    }
     if(m.t==='join'){
       const name=String(m.name||'').trim().slice(0,8)||'選手';
       const p=S.players.find(x=>x.cid===m.cid);
@@ -724,7 +796,7 @@ function startHost(room){
       if(S.phase!=='question'||S.paused||m.q!==S.qi||p.ans!=null)return;
       const q=S.qList[S.qi];if(!(m.choice>=0&&m.choice<q.opts.length))return;
       p.ans=m.choice;p.ansRemain=S.remain;
-      if(S.cfg.auto&&S.players.every(x=>x.ans!=null)){doReveal();return;}
+      if(S.cfg.auto&&(SEAT?S.players.filter(x=>online(x.cid)||x.ans!=null):S.players).every(x=>x.ans!=null)){doReveal();return;}
       changed();
     }
   }
@@ -735,14 +807,14 @@ function startHost(room){
     if(!pl.length){alert('目前的篩選條件沒有題目（或題庫是空的），請調整篩選條件或上傳題庫');return;}
     if(!S.players.length){alert('還沒有選手加入');return;}
     S.qList=pickUnits(pl,Math.min(S.cfg.n,pl.length)).map(prep);
-    S.stage=stageOf(S.cfg.grades,S.cfg.tiers,S.cfg.cats);S.limit=S.cfg.limit;S.qi=0;S.players.forEach(p=>{p.score=0;});resetQ();changed();
+    S.stage=stageOf(S.cfg.grades,S.cfg.tiers,S.cfg.cats);S.limit=S.cfg.limit;S.qi=0;S.nrev=0;S.players.forEach(p=>{p.score=0;p.res=[];});resetQ();changed();
   }
   /* 結算：鎖定作答並計分，但答案與得分先不對外公開 */
   function doReveal(){
     if(S.phase!=='question')return;
     const q=S.qList[S.qi];
-    S.players.forEach(p=>{p.gain=0;if(p.ans===q.ans)p.gain=CFG.pointsBase+(S.limit>0?Math.round(CFG.pointsSpeed*Math.max(0,p.ansRemain)/(S.limit*1000)):0);p.score+=p.gain;});
-    S.phase='reveal';S.paused=false;S.showAns=!!S.cfg.pub;changed();
+    S.players.forEach(p=>{p.gain=0;if(p.ans===q.ans)p.gain=CFG.pointsBase+(S.limit>0?Math.round(CFG.pointsSpeed*Math.max(0,p.ansRemain)/(S.limit*1000)):0);p.score+=p.gain;if(!p.res)p.res=[];p.res[S.qi]=p.ans==null?null:(p.ans===q.ans?1:0);});
+    S.nrev=S.qi+1;S.phase='reveal';S.paused=false;S.showAns=!!S.cfg.pub;changed();
   }
   function publish(){if(S.phase==='reveal'&&!S.showAns){S.showAns=true;changed();}}
   function next(){
@@ -804,14 +876,24 @@ function startHost(room){
     else if(a==='publish')publish();
     else if(a==='next')next();
     else if(a==='end'){if(confirm('確定要結束遊戲並顯示最終排名嗎？')){if(S.phase==='reveal')S.showAns=true;S.phase='end';changed();}}
-    else if(a==='again'){S.phase='lobby';S.stage=null;S.qList=[];S.qi=0;S.showAns=false;S.players.forEach(p=>{p.score=0;p.ans=null;p.gain=0;});changed();}
-    else if(a==='newroom'){if(confirm('這會清除所有選手與分數，確定嗎？')){S=fresh();changed();}}
-    else if(a==='kick'){S.players=S.players.filter(p=>p.cid!==b.dataset.cid);changed();}
+    else if(a==='again'){S.phase='lobby';S.stage=null;S.qList=[];S.qi=0;S.showAns=false;S.nrev=0;S.players.forEach(p=>{p.score=0;p.ans=null;p.gain=0;p.res=[];});changed();}
+    else if(a==='newroom'){if(confirm('這會清除所有選手與分數，確定嗎？')){const md=S.mode;S=fresh();S.mode=md;setMode(md);changed();}}
+    else if(a==='kick'){if(T)T.send({t:'kicked',cid:b.dataset.cid});S.players=S.players.filter(p=>p.cid!==b.dataset.cid);changed();}
+    else if(a==='kickOff'){const off=S.players.filter(p=>!online(p.cid));if(!off.length)return;if(confirm('要移除 '+off.length+' 位目前離線的選手嗎？（座號 '+off.map(p=>p.seat).join('、')+'）')){off.forEach(p=>{if(T)T.send({t:'kicked',cid:p.cid});});S.players=S.players.filter(p=>online(p.cid));changed();}}
+    else if(a==='csvReport')download(CFG.title+'_全班成績表_房'+room+'_'+stampFile()+'.csv',matrixCSV(reportMatrix()));
+    else if(a==='csvItems')download(CFG.title+'_題目分析_房'+room+'_'+stampFile()+'.csv',matrixCSV(itemMatrix()));
+    else if(a==='copyReport')quietCopy(reportMatrix().map(l=>l.map(v=>String(v==null?'':v).replace(/[\t\r\n]+/g,' ')).join('\t')).join('\n'),b);
   });
   app.addEventListener('change',e=>{
     const el=e.target,c=S.cfg;
     if(el.id==='csvf'){const f=el.files&&el.files[0];if(f)handleCSVFile(f,bankMode);return;}
     const tog=(arr,v,on)=>on?[...new Set([...arr,v])]:arr.filter(x=>x!==v);
+    if(el.dataset.cfg==='mode'){
+      if(el.value===S.mode)return;
+      if(S.players.length&&!confirm('切換賽制會移除目前已加入的 '+S.players.length+' 位選手，確定嗎？')){render();return;}
+      S.players.forEach(p=>{if(T)T.send({t:'kicked',cid:p.cid});});
+      S.players=[];S.mode=el.value;setMode(S.mode);changed();return;
+    }
     if(el.dataset.cfg==='n')c.n=parseInt(el.value,10);
     else if(el.dataset.cfg==='limit')c.limit=parseInt(el.value,10);
     else if(el.dataset.cfg==='auto')c.auto=el.checked;
@@ -876,6 +958,62 @@ function startHost(room){
         <tr><td><code>解析</code></td><td>老師看得到、公布後大螢幕顯示的重點說明</td></tr></table>
         <p style="margin-top:6px">第一列必須是欄位名稱。重複題目與格式有誤的列會被略過並列出原因。</p></details></div>`;
   }
+  const pad2=n=>String(n).padStart(2,'0');
+  const stampFile=()=>{const d=new Date();return d.getFullYear()+pad2(d.getMonth()+1)+pad2(d.getDate())+'-'+pad2(d.getHours())+pad2(d.getMinutes());};
+  const stampTxt=()=>{const d=new Date();return d.getFullYear()+'-'+pad2(d.getMonth()+1)+'-'+pad2(d.getDate())+' '+pad2(d.getHours())+':'+pad2(d.getMinutes());};
+  const matrixCSV=m=>'﻿'+m.map(l=>l.map(csvCell).join(',')).join('\r\n');
+  function quietCopy(text,btn){
+    const done=ok=>{if(!btn)return;const o=btn.dataset.o||btn.textContent;btn.dataset.o=o;btn.textContent=ok?'✅ 已複製！到 Google 試算表按 Ctrl+V 貼上':'⚠ 複製失敗，請改用「下載 CSV」';setTimeout(()=>{btn.textContent=o;},4000);};
+    const fb=()=>{const ta=document.createElement('textarea');ta.value=text;ta.style.cssText='position:fixed;left:-9999px;top:0';document.body.appendChild(ta);ta.select();let ok=false;try{ok=document.execCommand('copy');}catch(e){}ta.remove();done(ok);};
+    if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(text).then(()=>done(true),fb);else fb();
+  }
+  function reportData(){
+    const n=S.nrev||0,qs=S.qList.slice(0,n),pts=CFG.examPoints;
+    const rows=S.players.slice().sort((a,b)=>(a.seat||0)-(b.seat||0)).map(p=>{
+      const cells=qs.map((_,i)=>{const v=(p.res||[])[i];return v==null?'':v;});
+      const nc=cells.filter(x=>x===1).length;
+      const ex=pts?qs.reduce((t,q,i)=>t+(cells[i]===1?(pts[q.tier]||0):0),0):null;
+      return{p,cells,nc,ex};});
+    return{n,qs,rows};
+  }
+  function reportMatrix(){
+    const d=reportData(),pts=CFG.examPoints,grp=S.cfg.grades.map(g=>g||'未分組').join('、');
+    const head=['日期','房號',CFG.labels.lv1,'座號','姓名','答對題數','總題數','正確率','搶答總分'].concat(pts?['卷面分數']:[]).concat(d.qs.map((_,i)=>'Q'+(i+1)));
+    const out=[head];
+    const when=stampTxt();
+    d.rows.forEach(r=>{out.push([when,room,grp,r.p.seat,r.p.name||'',r.nc,d.n,d.n?Math.round(r.nc/d.n*100)+'%':'',r.p.score].concat(pts?[r.ex]:[]).concat(r.cells));});
+    return out;
+  }
+  function itemMatrix(){
+    const d=reportData(),out=[['題號',CFG.labels.cat,CFG.labels.lv1,CFG.labels.lv2,'題目','正解','答對人數','答錯人數','未作答人數','答對率']];
+    d.qs.forEach((q,i)=>{let ok=0,bad=0,no=0;d.rows.forEach(r=>{const v=r.cells[i];if(v===1)ok++;else if(v===0)bad++;else no++;});
+      const tot=ok+bad+no;
+      out.push([i+1,q.cat,q.grade||'',q.tier||'',q.q,q.opts[q.ans],ok,bad,no,tot?Math.round(ok/tot*100)+'%':'']);});
+    return out;
+  }
+  function reportHTML(){
+    const d=reportData(),pts=CFG.examPoints;
+    if(!d.rows.length)return'<p class="sub">沒有選手資料。</p>';
+    const avg=d.rows.reduce((t,r)=>t+r.nc,0)/d.rows.length;
+    const best=Math.max(...d.rows.map(r=>r.nc));
+    const th='<tr><th>座號</th><th>姓名</th><th>答對</th><th>正確率</th><th>搶答分</th>'+(pts?'<th>卷面分</th>':'')+d.qs.map((_,i)=>'<th>'+(i+1)+'</th>').join('')+'</tr>';
+    const tr=d.rows.map(r=>'<tr><td><b>'+r.p.seat+'</b></td><td>'+esc(r.p.name||'')+'</td><td><b>'+r.nc+'</b>/'+d.n+'</td><td>'+(d.n?Math.round(r.nc/d.n*100):0)+'%</td><td>'+r.p.score+'</td>'+(pts?'<td>'+r.ex+'</td>':'')+r.cells.map(v=>v===1?'<td class="c1">✓</td>':v===0?'<td class="c0">✗</td>':'<td class="cn">－</td>').join('')+'</tr>').join('');
+    return`<h3 style="margin-top:6px">📋 全班成績表</h3>
+      <p class="sub">共 <b>${d.rows.length}</b> 人・已結算 <b>${d.n}</b> 題・平均答對 <b>${avg.toFixed(1)}</b> 題・最高 <b>${best}</b> 題</p>
+      <div class="ctrls" style="margin:10px 0"><button class="btn pri" data-act="csvReport">⬇ 下載全班成績表（CSV）</button><button class="btn pri" data-act="copyReport">📋 複製（貼到 Google 試算表）</button><button class="btn" data-act="csvItems">⬇ 下載題目分析（CSV）</button></div>
+      <div class="tw"><table>${th}${tr}</table></div>
+      <p class="sub" style="margin-top:8px">匯入 Google 試算表：開啟試算表 → 檔案 → 匯入 → 上傳 → 選這份 CSV；或按「複製」後在儲存格 A1 直接貼上。答題欄 1＝答對、0＝答錯、空白＝未作答，方便用 SUM 加總。</p>`;
+  }
+  function seatPanel(){
+    const poolN=pool().length,by={};S.players.forEach(p=>{by[p.seat]=p;});
+    const off=S.players.filter(p=>!online(p.cid)).length;
+    const tiles=Array.from({length:MAXP},(_,i)=>{const n=i+1,p=by[n];
+      return p?`<div class="hseat on"><b>${n}</b><small><span class="dot ${online(p.cid)?'on':''}"></span>${esc(p.name||'')}</small><button class="btn danger" data-act="kick" data-cid="${esc(p.cid)}">移除</button></div>`
+              :`<div class="hseat"><b>${n}</b><small>—</small></div>`;}).join('');
+    return`<div class="panel"><h3>② 選手　已加入 <b style="color:var(--acc);font-size:1.3em">${S.players.length}</b> / ${MAXP} 人</h3><div class="hseats">${tiles}</div>
+      <p class="sub" style="margin-top:10px">學生用手機掃大螢幕上的 QR Code，選自己的「座號」加入（姓名可不填）。同一座號不能重複加入；按「移除」會讓該座號重新開放，被移除的手機會看到提示。</p>
+      <div class="ctrls" style="margin-top:14px"><button class="btn pri" data-act="start" ${S.players.length&&poolN?'':'disabled'}>▶ 開始遊戲（${S.players.length} 位選手）</button><button class="btn" data-act="kickOff" ${off?'':'disabled'}>移除離線選手（${off}）</button></div></div>`;
+  }
   function lobbyHTML(){
     const c=S.cfg,poolN=pool().length;
     const slots=Array.from({length:MAXP},(_,i)=>{const p=S.players[i];
@@ -894,17 +1032,25 @@ function startHost(room){
         <div class="qa" style="margin-top:8px"><button class="btn" data-act="catAll">全選</button><button class="btn" data-act="catNone">清除</button></div></div></div>
       ${poolN<c.n?`<div class="row"><span class="warn">⚠ 符合條件的題目只有 ${poolN} 題，少於設定的 ${c.n} 題，本場將出 ${poolN} 題。</span></div>`:''}`;
     return`<div class="grid2"><div class="panel"><h3>① 遊戲設定</h3>
+      ${CFG.seatMode?`<div class="row"><label class="t">賽制</label><select data-cfg="mode"><option value="classic" ${S.mode==='classic'?'selected':''}>經典賽（最多 4 人・角色）</option><option value="class" ${S.mode==='class'?'selected':''}>全班普及賽（最多 ${CLASSMAX} 人・座號）</option></select></div>`:''}
       <div class="row"><label class="t">題數</label><select data-cfg="n">${nOpts.map(v=>`<option value="${v}" ${c.n===v?'selected':''}>${v} 題</option>`).join('')}</select><span class="mu">符合條件的題庫共 <b style="color:var(--acc)">${poolN}</b> 題</span></div>
       <div class="row"><label class="t">每題時間</label><select data-cfg="limit">${[0,10,15,20,30,45,60].map(v=>`<option value="${v}" ${c.limit===v?'selected':''}>${v?v+' 秒':'不限時'}</option>`).join('')}</select></div>
       ${filt}
       <div class="row"><label class="t">作答結束</label><label style="color:var(--ink);font-size:14px"><input type="checkbox" data-cfg="auto" ${c.auto?'checked':''}> 全員作答後自動結算</label></div>
       <div class="row"><label class="t">公布方式</label><label style="color:var(--ink);font-size:14px"><input type="checkbox" data-cfg="pub" ${c.pub?'checked':''}> 結算後自動公布正解與得分（預設關閉，由老師手動公布）</label></div>
-    </div><div class="panel"><h3>② 選手（最多 ${MAXP} 人）</h3><div class="slots">${slots}</div>
+    </div>${SEAT?seatPanel():`<div class="panel"><h3>② 選手（最多 ${MAXP} 人）</h3><div class="slots">${slots}</div>
       <p class="sub" style="margin-top:10px">選手用手機掃描大螢幕上的 QR Code，或開啟「選手連結」，或在首頁輸入房號 <b>${room}</b> 與暱稱即可加入，系統會自動分配角色與顏色。</p>
       <div class="ctrls" style="margin-top:14px"><button class="btn pri" data-act="start" ${S.players.length&&poolN?'':'disabled'}>▶ 開始遊戲（${S.players.length} 位選手）</button></div>
-    </div></div>${bankPanel()}`;
+    </div>`}</div>${bankPanel()}`;
+  }
+  function seatStatus(rev){
+    const items=S.players.map(p=>({seat:p.seat,name:p.name,on:online(p.cid),st:!rev?(p.ans!=null?'done':'idle'):(p.ans==null?'idle':(p.gain>0?'right':'wrong'))}));
+    const na=S.players.filter(p=>p.ans!=null).length;
+    return`<div class="panel"><h3>選手狀態（教師視角）</h3><div class="seatinfo" style="font-size:14px">已作答 <b>${na}</b> / ${S.players.length} 人　<span class="lg1"><i style="background:var(--ok)"></i>${rev?'答對':'已作答'}</span>${rev?'<span class="lg1"><i style="background:var(--bad)"></i>答錯</span>':''}<span class="lg1"><i style="background:#2b3438"></i>未作答</span></div>${seatGrid(items,'hs')}</div>`;
   }
   function gameHTML(){
+    if(S.phase==='end'&&SEAT)return`<div class="panel"><h3>🏁 遊戲結束（共 ${S.qList.length} 題，已結算 ${S.nrev||0} 題）</h3>${reportHTML()}
+        <div class="ctrls" style="margin-top:14px"><button class="btn pri" data-act="again">再玩一次（保留選手）</button><button class="btn danger" data-act="newroom">清除並重設房間</button></div></div>`;
     if(S.phase==='end'){
       const rows=S.players.slice().sort((a,b)=>b.score-a.score).map(p=>`<tr><td>${medal(rankOf(S.players,p))}</td><td style="color:${pcv(p)};font-weight:700">${esc(p.name)}</td><td><b>${p.score}</b> 分</td></tr>`).join('');
       return`<div class="panel"><h3>🏆 遊戲結束（共 ${S.qList.length} 題）</h3><table><tr><th>名次</th><th>選手</th><th>總分</th></tr>${rows}</table>
@@ -929,11 +1075,11 @@ function startHost(room){
           <button class="btn pri" data-act="next" ${rev?'':'disabled'}>${S.qi+1>=S.qList.length?'🏁 顯示結果':'➡ 下一題'}（空白鍵）</button>
           <button class="btn danger" data-act="end">⏹ 結束遊戲</button></div>
         <p class="sub" style="margin-top:10px">流程：作答 → 結算（鎖定作答、大螢幕只顯示每人選了什麼）→ 老師講解 → 公布正解與得分 → 下一題。</p></div>
-        <div class="panel"><h3>選手狀態（教師視角）</h3><table><tr><th>選手</th><th>分數</th><th>本題</th></tr>${prow}</table></div></div></div>`;
+        ${SEAT?seatStatus(rev):`<div class="panel"><h3>選手狀態（教師視角）</h3><table><tr><th>選手</th><th>分數</th><th>本題</th></tr>${prow}</table></div>`}</div></div>`;
   }
   function render(){
     const msg={wait:'連線雲端中…',ok:'✅ 雲端已連線（可跨裝置）',err:'⚠️ 雲端連線失敗：目前只有同一台電腦的分頁能連線',dup:'⚠️ 此房號已在另一個分頁開啟，請關閉重複的主持人分頁'}[cloud]||'';
-    app.innerHTML=`<div class="host"><header class="hh"><div><h1>${esc(TITLE)}・主持人控制台</h1><div class="sub">${msg}</div></div><div class="room"><small>房號</small><b>${room}</b></div></header>
+    app.innerHTML=`<div class="host"><header class="hh"><div><h1>${TITLEH}・主持人控制台</h1><div class="sub">${msg}</div></div><div style="display:flex;gap:14px;align-items:center">${creditHTML()}<div class="room"><small>房號</small><b>${room}</b></div></div></header>
       <div class="linkbar"><button class="btn" data-act="openScreen">🖥️ 開啟大螢幕視窗</button><button class="btn" data-act="copyScreen">複製大螢幕連結</button><button class="btn" data-act="copyPlay">複製選手連結</button></div>
       ${S.phase==='lobby'?lobbyHTML():gameHTML()}</div>`;
   }
@@ -945,22 +1091,26 @@ function startClient(role,room){
   const cid=(()=>{let c=sessionStorage.getItem(SK+'-cid');if(!c){c='p'+Math.random().toString(36).slice(2,10);sessionStorage.setItem(SK+'-cid',c);}return c;})();
   let st=null,recvAt=0,lastTs=0,lastSig='',localChoice=null,localQ=-1,full=false,T=null;
   let myName=sessionStorage.getItem(SK+'-name')||'';
+  const SEATK=SK+'-seat';
+  let mySeat=parseInt(sessionStorage.getItem(SEATK)||'0',10)||0,kicked=false,denied='';
   const me=()=>st&&st.players.find(p=>p.cid===cid);
   function onMsg(m){
     if(!m)return;
     if(m.t==='_open'){T.send({t:'hello',role,cid});return;}
     if(m.t==='full'&&m.cid===cid){full=true;render(true);return;}
+    if(m.t==='deny'&&m.cid===cid){denied=m.reason==='taken'?'座號 '+m.seat+' 已經有人使用了，請確認座號，或請老師協助':'座號不正確';try{sessionStorage.removeItem(SEATK);}catch(e){}render(true);return;}
+    if(m.t==='kicked'&&m.cid===cid){kicked=true;try{sessionStorage.removeItem(SEATK);}catch(e){}render(true);return;}
     if(m.t!=='state')return;
     if(m.s.ts<lastTs)return;
-    lastTs=m.s.ts;recvAt=Date.now();st=m.s;
+    lastTs=m.s.ts;recvAt=Date.now();st=m.s;setMode(st.mode||'classic');
     if(st.phase==='lobby'||st.qi!==localQ&&st.phase==='question'){localChoice=null;localQ=st.qi;}
     const p=me();
     if(role==='play'&&p&&st.phase==='question'&&localChoice!==null&&!p.answered&&!st.paused)T.send({t:'answer',cid,q:st.qi,choice:localChoice});
     render();
   }
   T=makeT(room,false,onMsg,()=>{});
-  function join(name){myName=name;sessionStorage.setItem(SK+'-name',name);full=false;T.send({t:'join',cid,name});render(true);}
-  setInterval(()=>{T.send({t:'hello',role,cid});if(role==='play'&&myName&&st&&!me()&&!full)T.send({t:'join',cid,name:myName});},3000);
+  function join(name){myName=name;sessionStorage.setItem(SK+'-name',name);full=false;kicked=false;denied='';if(SEAT)sessionStorage.setItem(SEATK,String(mySeat));T.send({t:'join',cid,name,seat:mySeat});render(true);}
+  setInterval(()=>{T.send({t:'hello',role,cid});if(role==='play'&&st&&!me()&&!full&&!kicked&&!denied&&(SEAT?sessionStorage.getItem(SEATK):myName))T.send({t:'join',cid,name:myName,seat:mySeat});},3000);
   T.send({t:'hello',role,cid});
   const left=()=>{if(!st||st.phase!=='question'||st.limit===0)return 0;let r=st.remain;if(!st.paused)r-=Date.now()-recvAt;return Math.max(0,r);};
   function updTimer(){
@@ -972,8 +1122,8 @@ function startClient(role,room){
   setInterval(updTimer,200);
   function sig(conn){
     if(!st)return'x';
-    if(role==='play'&&!me())return JSON.stringify(['join',conn,myName,full]);
-    return JSON.stringify([st.phase,st.paused,st.qi,conn,st.q&&st.q.ans,st.players.map(p=>[p.cid,p.ci,p.name,p.score,p.answered,p.choice,p.gain,p.on]),role==='play'?localChoice:0]);
+    if(role==='play'&&!me())return JSON.stringify(['join',conn,myName,full,mySeat,kicked,denied,SEAT,SEAT?st.players.map(p=>[p.seat,p.on]):0]);
+    return JSON.stringify([st.phase,st.mode,st.paused,st.qi,conn,st.q&&st.q.ans,st.players.map(p=>[p.cid,p.ci,p.seat,p.name,p.score,p.nc,p.answered,p.choice,p.gain,p.on]),role==='play'?localChoice:0]);
   }
   function render(force){
     const conn=!!st&&Date.now()-recvAt<6000;
@@ -989,22 +1139,30 @@ function startClient(role,room){
   }
   function screenHTML(conn){
     const lost=conn?'':'<div class="lost">連線中斷，重新連線中…</div>';
-    if(!st)return`<div class="scr center"><div class="ttl">${esc(TITLE)}</div><div class="hint">連線中… 房號 ${esc(room)}</div></div>`;
+    if(!st)return`<div class="scr center"><div class="ttl">${TITLEH}</div><div class="hint">連線中… 房號 ${esc(room)}</div></div>`;
     const s=st;
     if(s.phase==='lobby'){
       const url=joinURL(room);
-      return`<div class="scr lobby2">${lost}<div><div class="lt">${esc(TITLE)}</div><div class="stagebar">${stageChip(s.stage)}</div></div>
+      return`<div class="scr lobby2">${lost}<div><div class="lt">${TITLEH}</div><div class="stagebar">${stageChip(s.stage)}</div></div>
       <div class="lmain"><div class="lleft"><div class="joinbox">用手機<b>掃描右側 QR Code</b>加入<br>或開啟 <b>${esc(pubBase)}</b> 點「我是選手」</div><div class="rlabel">房號</div><div class="bigroom">${esc(room)}</div></div>
       <div class="lqr"><div class="qrbox">${qrSVG(url)}</div><div class="qrcap">📱 掃描加入</div><div class="qrurl">${esc(url)}</div></div></div>
-      <div class="plist lg">${slotCards(s)}</div><div class="hint">等待主持人開始…</div></div>`;
+      ${SEAT?`<div class="seatinfo big">已加入 <b>${s.players.length}</b> / ${MAXP} 人</div>${seatGrid(s.players.map(p=>({seat:p.seat,name:p.name,on:p.on,st:'joined'})))}`:`<div class="plist lg">${slotCards(s)}</div>`}<div class="hint">等待主持人開始…</div>${creditHTML()}</div>`;
     }
-    if(s.phase==='end')return`<div class="scr lobby">${lost}<div class="ttl">🏆 最終排名</div><div class="stagebar">${stageChip(s.stage)}</div>${rankHTML(s)}</div>`;
+    if(s.phase==='end'&&SEAT){
+      const top=s.players.slice().sort((a,b)=>b.score-a.score).slice(0,10);
+      return`<div class="scr lobby">${lost}<div class="ttl">🏆 前 10 名</div><div class="stagebar">${stageChip(s.stage)}</div>
+        <div class="rank seatrank">${top.map(p=>{const r=rankOf(s.players,p);return`<div class="rk ${r===1?'first':''}" style="--pc:${pcv(p)}"><span class="m">${medal(r)}</span><span class="n">${p.seat} 號 ${esc(p.name||'')}</span><span class="sc">${p.score} 分・對 ${p.nc}</span></div>`;}).join('')}</div>
+        <div class="hint">全班 ${s.players.length} 人完成作答，成績表由老師整理</div>${creditHTML()}</div>`;}
+    if(s.phase==='end')return`<div class="scr lobby">${lost}<div class="ttl">🏆 最終排名</div><div class="stagebar">${stageChip(s.stage)}</div>${rankHTML(s)}${creditHTML()}</div>`;
     const q=s.q,rev=s.phase==='reveal',open=rev&&q.ans!=null;
     const opts=q.opts.map((o,i)=>{const m=optMeta(q.tf,i);
-      const chips=rev?'<span class="chips">'+s.players.filter(p=>p.choice===i).map(p=>av(p,'chip')).join('')+'</span>':'';
+      const chips=rev?(SEAT?'<span class="chips"><b style="font-size:.8em;color:#444">'+s.players.filter(p=>p.choice===i).length+' 人</b></span>':'<span class="chips">'+s.players.filter(p=>p.choice===i).map(p=>av(p,'chip')).join('')+'</span>'):'';
       return`<div class="opt ${m.cls} ${open?(i===q.ans?'right':'dim'):''}"><span class="sym">${m.sym}</span><span class="txt">${q.tf?esc(o.slice(2)):esc(o)}</span>${chips}</div>`;}).join('');
     const maxS=Math.max(100,...s.players.map(p=>p.score));
-    const cards=s.players.map(p=>{let t;
+    const seatBlock=()=>{const na=s.players.filter(p=>p.answered).length;
+      const items=s.players.map(p=>({seat:p.seat,name:p.name,on:p.on,st:open?(p.choice==null?'idle':(p.choice===q.ans?'right':'wrong')):(p.answered?'done':'idle')}));
+      return`<div class="seatinfo">已作答 <b>${na}</b> / ${s.players.length} 人<span class="lg1"><i style="background:var(--ok)"></i>${open?'答對':'已作答'}</span>${open?'<span class="lg1"><i style="background:var(--bad)"></i>答錯</span>':''}<span class="lg1"><i style="background:#2b3438"></i>未作答</span></div>${seatGrid(items)}`;};
+    const cards=SEAT?'':s.players.map(p=>{let t;
       const ch=p.choice==null?null:optMeta(q.tf,p.choice);
       if(!rev)t=p.answered?'<span class="ok">✔ 已作答</span>':'<span class="mu">思考中…</span>';
       else if(!open)t=ch?`<span class="mu">選了 ${ch.sym}</span>`:'<span class="mu">未作答</span>';
@@ -1014,21 +1172,32 @@ function startClient(role,room){
     const note=!rev?'':open?`<div class="exp"><b>✅ 正解：${am.sym} ${q.tf?esc(q.opts[q.ans].slice(2)):esc(q.opts[q.ans])}</b><br>${esc(q.exp)}</div>`:'<div class="wait">📣 作答結束！請聽老師講解，正確答案由老師公布</div>';
     return`<div class="scr ${rev?'rev':''}">${lost}<div class="top">${stageChip(s.stage)}<span class="cat">${esc(q.cat)}</span>${lvSpan(q,'lv')}<span class="no">第 ${s.qi+1} / ${s.total} 題</span>
       <div class="timer"><div class="bar"><i id="tbar"></i></div><b id="tnum"></b></div></div>
-      ${scnBox(q.scn,'scn bscn')}<div class="question">${esc(q.q)}</div><div class="opts">${opts}</div>${note}<div class="plist">${cards}</div>
+      ${scnBox(q.scn,'scn bscn')}<div class="question">${esc(q.q)}</div><div class="opts">${opts}</div>${note}${SEAT?seatBlock():`<div class="plist">${cards}</div>`}
       ${s.paused&&!rev?'<div class="pause">⏸ 暫停中</div>':''}</div>`;
   }
   function playHTML(conn){
     const lost=conn?'':'<div class="lost">連線中…</div>';
     const p=me();
     if(!p){
-      return`<div class="pl center">${lost}<h2>${esc(TITLE)}</h2><p class="mu">房號 ${esc(room)}</p>
+      if(SEAT){
+        const tk={};(st?st.players:[]).forEach(q=>{tk[q.seat]=q;});
+        const btns=Array.from({length:MAXP},(_,i)=>{const n=i+1,q=tk[n];const cls=(mySeat===n?'sel ':'')+(q&&q.on?'tk':(q?'rc':''));return`<button data-seat="${n}" class="${cls}" ${q&&q.on&&mySeat!==n?'disabled':''}>${n}</button>`;}).join('');
+        const msg=kicked?'你已被老師移除，請重新選座號加入':denied||(full?'房間已滿':'');
+        return`<div class="pl center">${lost}<h2>${TITLEH}</h2><p class="mu">房號 ${esc(room)}</p>
+          <div style="font-weight:800;font-size:18px">① 選擇你的座號</div><div class="seatpick">${btns}</div>
+          <div style="font-weight:800;font-size:18px">② 姓名（可不填）</div>
+          <input id="nm" maxlength="8" placeholder="姓名" autocomplete="off">
+          <button class="btn pri" id="jn" style="font-size:20px;padding:.7em 2em" ${mySeat?'':'disabled'}>${mySeat?'我是 '+mySeat+' 號，加入':'請先選座號'}</button>
+          <p class="bad">${esc(msg)}</p>${st?'':'<p class="mu">尚未連到主持人…</p>'}${creditHTML()}</div>`;
+      }
+      return`<div class="pl center">${lost}<h2>${TITLEH}</h2><p class="mu">房號 ${esc(room)}</p>
         <input id="nm" maxlength="8" placeholder="輸入你的暱稱" autocomplete="off">
         <button class="btn pri" id="jn" style="font-size:20px;padding:.7em 2em">加入遊戲</button>
-        <p class="bad">${full?'房間已滿（最多 4 位選手）':''}</p>${st?'':'<p class="mu">尚未連到主持人…</p>'}</div>`;
+        <p class="bad">${kicked?'你已被老師移除，請重新加入':full?'房間已滿（最多 '+MAXP+' 位選手）':''}</p>${st?'':'<p class="mu">尚未連到主持人…</p>'}</div>`;
     }
     const s=st,rank=rankOf(s.players,p);
-    const head=`<div class="bar2" style="--pc:${pcv(p)}"><div class="who">${av(p,'mini')}<span>${esc(p.name)}</span></div><div><span class="sc2">${p.score} 分</span> <span class="g">・第 ${rank} 名</span></div></div>`;
-    if(s.phase==='lobby')return`<div class="pl">${lost}${head}<div class="pl center" style="flex:1">${av(p,'big')}<h2 style="margin-top:14px;color:${pcv(p)}">${CHARS[p.ci%4]}</h2><p class="mu">已加入！等待主持人開始遊戲…</p></div></div>`;
+    const head=`<div class="bar2" style="--pc:${pcv(p)}"><div class="who">${SEAT?`<span class="seatb">${p.seat}</span>`:av(p,'mini')}<span>${esc(p.name)}</span></div><div><span class="sc2">${p.score} 分</span> <span class="g">・第 ${rank} 名</span></div></div>`;
+    if(s.phase==='lobby')return`<div class="pl">${lost}${head}<div class="pl center" style="flex:1">${SEAT?`<div class="seatbig">${p.seat}</div>`:av(p,'big')}<h2 style="margin-top:14px;color:${pcv(p)}">${SEAT?(p.name?esc(p.name):'座號 '+p.seat):CHARS[p.ci%4]}</h2><p class="mu">已加入！等待主持人開始遊戲…</p></div></div>`;
     if(s.phase==='end')return`<div class="pl">${lost}${head}<div class="result ${rank===1?'ok2':'nn'}">${medal(rank)} 第 ${rank} 名<small>總分 ${p.score} 分</small></div><p class="msg">看大螢幕的最終排名吧！</p></div>`;
     const q=s.q;
     if(s.phase==='reveal'){
@@ -1046,7 +1215,9 @@ function startClient(role,room){
   }
   app.addEventListener('click',e=>{
     if(role!=='play')return;
-    if(e.target.closest('#jn')){const v=($('#nm').value||'').trim();if(!v){$('#nm').focus();return;}join(v);return;}
+    const sb=e.target.closest('[data-seat]');
+    if(sb&&SEAT){const nm=$('#nm');if(nm)myName=nm.value;mySeat=parseInt(sb.dataset.seat,10);denied='';render(true);const n2=$('#nm');if(n2)n2.value=myName;return;}
+    if(e.target.closest('#jn')){const v=($('#nm').value||'').trim();if(SEAT){if(!mySeat)return;join(v);return;}if(!v){$('#nm').focus();return;}join(v);return;}
     const b=e.target.closest('[data-ch]');if(!b||!st)return;
     const p=me();if(!p||st.phase!=='question'||st.paused||localChoice!==null||p.answered)return;
     localChoice=parseInt(b.dataset.ch,10);localQ=st.qi;
@@ -1054,7 +1225,7 @@ function startClient(role,room){
     if(navigator.vibrate)try{navigator.vibrate(30);}catch(_){}
     render(true);
   });
-  app.addEventListener('keydown',e=>{if(e.key==='Enter'&&e.target.id==='nm'){const v=(e.target.value||'').trim();if(v)join(v);}});
+  app.addEventListener('keydown',e=>{if(e.key==='Enter'&&e.target.id==='nm'){const v=(e.target.value||'').trim();if(SEAT){if(mySeat)join(v);}else if(v)join(v);}});
   render(true);
 }
 
