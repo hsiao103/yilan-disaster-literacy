@@ -1229,6 +1229,13 @@ function startClient(role,room){
   render(true);
 }
 
+/* ===== 大螢幕：固定 1920×1080 畫布，依視窗大小等比例縮放（留邊不變形）===== */
+function startFrame(room){
+  document.body.style.cssText='margin:0;overflow:hidden;background:var(--bg)';
+  app.innerHTML='<iframe id="sf" title="大螢幕" src="'+esc(pageBase)+'#screenf='+room+'" style="position:absolute;left:0;top:0;width:1920px;height:1080px;border:0;transform-origin:0 0;background:var(--bg)"></iframe>';
+  const fit=()=>{const k=Math.min(innerWidth/1920,innerHeight/1080);const f=$('#sf');if(f)f.style.transform='translate('+Math.round((innerWidth-1920*k)/2)+'px,'+Math.round((innerHeight-1080*k)/2)+'px) scale('+k+')';};
+  window.addEventListener('resize',fit);fit();
+}
 /* ===== 路由 ===== */
 window.addEventListener('hashchange',()=>location.reload());
 const h=location.hash.replace('#','');
@@ -1236,6 +1243,8 @@ const [role,room]=h.split('=');
 loadBank().then(()=>{
   if(role==='solo'&&room===undefined)startSolo();
   else if(role==='host'&&/^\d{4}$/.test(room))startHost(room);
+  else if(role==='screen'&&/^\d{4}$/.test(room)&&window.top===window.self&&!CFG.noFrame)startFrame(room);
+  else if(role==='screenf'&&/^\d{4}$/.test(room))startClient('screen',room);
   else if((role==='screen'||role==='play')&&/^\d{4}$/.test(room))startClient(role,room);
   else home();
 });
